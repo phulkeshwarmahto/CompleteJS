@@ -1,0 +1,1 @@
+// DOM = it is a programming interface for HTML and XML documents.

@@ -1,0 +1,114 @@
+/* DOM = it is a programming interface for HTML and XML documents.
+It represents the structure of a document as a tree of objects, allowing scripts to access and manipulate the content, structure, and style of a document.
+The DOM provides a way to interact with the document, allowing developers to create dynamic web pages and applications by modifying the document structure, style, and content in response to user actions or other events.
+
+ The DOM is language-agnostic, meaning it can be used with various programming languages, but it is most commonly associated with JavaScript in web development.
+The DOM is a standard that defines the structure and behavior of documents, and it is implemented by web browsers to provide a consistent interface for developers to work with HTML and XML documents.
+The DOM is a tree-like structure where each node represents a part of the document, such as an element, attribute, or text content.
+The DOM provides methods and properties to traverse the document tree, access and modify elements, attributes, and text content, and respond to events such as user interactions.
+The DOM is an essential part of web development, enabling developers to create interactive and dynamic web applications by manipulating the document structure and content in real-time.
+
+
+/*  structutre of the DOM    
++-----------+
+|  window   |
++-----------+
+     |
++-----------+
+| document  |
++-----------+
+     |
++-----------+
+|   html    |
++-----------+
+   /     \
+ /         \
+v           v
++------+   +------+
+| head |   | body |
++------+   +------+
+  |          |   \
+  |          |    \
+  v          v     v
++------+   +------+ +--------+
+| meta |   |  div | | script |
++------+   +------+ +--------+
+| meta |     |
++------+     v
+|title |  +------+------+---+
++------+  | img, h1, p, div |
+| link |  +-------------+---+
++------+
+
+all boxes are nodes and also a objects in the DOM.
+Each node can have attributes, child nodes, and text content.
+*/
+
+// Accessing the global object and document object in the browser environment
+
+// console.dir(window); // window is the global object in the browser environment
+// console.dir(document); // document is a property of the window object, representing the DOM of the current page
+// console.dir(document.documentElement); // Represents the root element of the document (usually <html>)
+// console.dir(document.head); // Represents the <head> element of the document
+// console.dir(document.body); // Represents the <body> element of the document
+
+// let word = document.getElementById("myH") 
+// console.dir(word); // Accessing an element by its ID
+// console.dir(word.innerHTML); // Accessing the inner HTML of the element
+// console.log(word.tagName); // Logging the tag name of the element (e.g., "H1")
+
+// let elements = document.getElementsByClassName("para");
+// console.dir(elements); // Accessing elements by their class name
+// console.log(elements); // Logging the HTMLCollection of elements with the class "para"
+
+// let paragraphs = document.getElementsByTagName("p");
+// console.dir(paragraphs); // Accessing all <p> elements in the document
+// console.log(paragraphs); // Logging the HTMLCollection of <p> elements
+
+// // querySelector and querySelectorAll
+// let firstPara = document.querySelector("p"); // Selects the first <p> element in the document
+// console.dir(firstPara); // Logging the first <p> element
+// console.log(firstPara); // Logging the first <p> element
+// let allParas = document.querySelectorAll("p"); // Selects all <p> elements in the document
+// console.dir(allParas); // Logging the NodeList of all <p> elements
+// console.log(allParas); // Logging the NodeList of all <p> elements
+
+// // element tags?
+// console.log(document.body.firstChild); // Accessing the first child of the body element
+// console.log(document.body.lastChild); // Accessing the last child of the body element
+// let child = document.querySelector("p").children; // Accessing the children of the first paragraph element
+// console.dir(child); // Logging the HTMLCollection of children of the first <div> element
+// console.log(child); // Logging the HTMLCollection of children of the first <div> element
+
+//
+// let div = document.querySelector("div"); // Selecting the first <div> element
+// console.dir(div); // Logging the <div> element
+// console.log(div); // Logging the <div> element
+// console.log(div.innerText) ; // Accessing the inner text of the <div> element
+// console.log(div.innerHTML); // Accessing the inner HTML of the <div> element
+// console.log(div.textContent); // Accessing the text content of the <div> element even id content is not visible
+// // console.log(div.innerText =  "Hello World!"); // Modifying the inner text of the <div> element
+// // console.log(div.innerHTML = "<h1>Hello World!</h1>"); // Modifying the inner HTML of the <div> element
+// let heading = document.querySelector("h2"); // Selecting the first <h2> element
+// console.dir(heading); // Logging the <h2> element
+// console.log(heading); // Logging the <h2> element
+// console.log(heading.innerText = "2.Welcome to my website"); // Accessing the inner text of the <h2> element
+// console.log(heading.innerHTML = "<h1>Welcome to my website</h1>"); // Modifying the inner HTML of the <h2> element
+
+// let heading2 = document.querySelector("h1"); // Selecting the first <h2> element
+// console.dir(heading2); // Logging the <h1> element
+// console.log(heading2); // Logging the <h1> element
+// console.log(heading2.innerText ); // Accessing the inner text of the <h1> element
+// console.log("");
+// console.log(heading2.textContent); // Modifying the text content of the <h2> element
+
+let div = document.querySelector("div")
+console.log(div);
+
+let id = div.getAttribute("id");
+console.log(id);
+
+let name = div.getAttribute("name");
+console.log(name);
+
+let setId = div.setAttribute()
